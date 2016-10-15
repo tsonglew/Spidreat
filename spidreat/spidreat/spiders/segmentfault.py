@@ -13,14 +13,9 @@ class SegmentFaultSpider(scrapy.Spider):
             ]
 
     def parse(self, response):
-        for each in response.xpath('//div[@class="post-meta"]/p'):
+        for each in 
             try:
-                time = each.xpath('text()').extract()[1].strip()[:10]
-                item = JobboleItem()
-                item['title'] = each.xpath('a[@class="meta-title"]/@title').extract()
-                item['link'] = each.xpath('a[@class="meta-title"]/@href').extract()
-                item['timestamp'] = time
-                item['tag'] = 'JobbolePython'
+
                 yield item
             except IndexError:
                 continue
