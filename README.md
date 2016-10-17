@@ -1,9 +1,13 @@
 # Spidreat :beetle:
 
 ## Aim at
-capturing articles from specific websites(especially Programming-related ones)
+capturing articles from popular programming-related websites
 
 ## Based on
-Python
 
-Scrapy
+spidreat:
+* Python
+* Scrapy
+
+nspidreat:
+* Node.js
