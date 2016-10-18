@@ -10,7 +10,6 @@ class JobbolePythonSpider(scrapy.Spider):
     start_urls = [
             "http://python.jobbole.com/",
             ]
-
     def parse(self, response):
         for each in response.xpath('//div[@class="post-meta"]/p'):
             try:
@@ -62,7 +61,7 @@ class JobboleJavaSpider(scrapy.Spider):
             except IndexError:
                 continue
 
-class JobboleFrontSpider(scrapy.Spider):
+class JobboleAndroidSpider(scrapy.Spider):
     name = "jobboleandroid"
     allowed_domains = ["jobbole.com"]
     start_urls = [
@@ -81,7 +80,7 @@ class JobboleFrontSpider(scrapy.Spider):
             except IndexError:
                 continue
 
-class JobboleFrontSpider(scrapy.Spider):
+class JobboleIOSSpider(scrapy.Spider):
     name = "jobboleios"
     allowed_domains = ["jobbole.com"]
     start_urls = [
